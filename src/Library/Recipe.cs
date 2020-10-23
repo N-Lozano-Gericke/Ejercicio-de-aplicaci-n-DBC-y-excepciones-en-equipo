@@ -17,11 +17,13 @@ namespace Full_GRASP_And_SOLID
 
         public void AddStep(Step step)
         {
+            //precondicion step distinto de nulo
             this.steps.Add(step);
         }
 
         public void RemoveStep(Step step)
         {
+            //precondicion step ingresado debe estar en la lista steps
             this.steps.Remove(step);
         }
 

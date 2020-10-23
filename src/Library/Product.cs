@@ -11,8 +11,10 @@ namespace Full_GRASP_And_SOLID
         public Product(string description, double unitCost)
         {
             this.Description = description;
+            // precondicion para crear el producto
             this.UnitCost = unitCost;
         }
+
 
         public string Description { get; set; }
 

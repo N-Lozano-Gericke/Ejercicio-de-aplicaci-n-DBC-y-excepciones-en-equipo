@@ -4,7 +4,7 @@
 // </copyright>
 //-------------------------------------------------------------------------------
 
-namespace Full_GRASP_And_SOLID
+namespace Full_GRASP_And_SOLID.Library
 {
     public class Step
     {
@@ -23,5 +23,14 @@ namespace Full_GRASP_And_SOLID
         public int Time { get; set; }
 
         public Equipment Equipment { get; set; }
+
+        //Step se encarga solo de calcular el costo de cada paso por patron Expert.
+        public double StepCost
+        {
+            get
+            {
+                return (this.Quantity * this.Input.UnitCost) + (this.Equipment.HourlyCost * this.Time);
+            }
+        }
     }
 }

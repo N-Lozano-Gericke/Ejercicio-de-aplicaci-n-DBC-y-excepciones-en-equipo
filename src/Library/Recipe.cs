@@ -7,7 +7,7 @@
 using System;
 using System.Collections;
 
-namespace Full_GRASP_And_SOLID.Library
+namespace Full_GRASP_And_SOLID
 {
     public class Recipe
     {
@@ -25,21 +25,6 @@ namespace Full_GRASP_And_SOLID.Library
             this.steps.Remove(step);
         }
 
-        //Recipe se encarga de calcular el costo total en base a los costos de cada Step. Expert.
-        public double GetProductionCost
-        {
-            get
-            {
-                double result = 0;
-                foreach (Step item in this.steps)
-                {
-                    result = result + item.StepCost;   
-                }
-                return result;
-            }
-        }
-
-        //PrintRecipe esta mal que este en esta clase, deberia de estar en una clase separada (SRP)
         public void PrintRecipe()
         {
             Console.WriteLine($"Receta de {this.FinalProduct.Description}:");
@@ -48,8 +33,6 @@ namespace Full_GRASP_And_SOLID.Library
                 Console.WriteLine($"{step.Quantity} de '{step.Input.Description}' " +
                     $"usando '{step.Equipment.Description}' durante {step.Time}");
             }
-            //Agrego imprimir el costo total de produccion
-            Console.WriteLine($"Total: {this.GetProductionCost}");
         }
     }
 }

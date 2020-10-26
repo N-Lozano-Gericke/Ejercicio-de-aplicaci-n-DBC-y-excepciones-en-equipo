@@ -1,0 +1,1 @@
+En este ejercicio no era necesario realizar la programacion de las precondiciones, postcondiciones y/o invariantes, solo debiamos comentar el codigo.
